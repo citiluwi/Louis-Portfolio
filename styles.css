@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap');
+:root {
+  --color-bg: #a4abac;     
+  --color-accent: #3d1d96; 
+  --color-alert: #53a575;
+  --color-hero: #d4b7b7;   
+  --color-text: #222;
+  --color-border: #7489b4;
+  --font-sans: "Inter", Arial, Helvetica, sans-serif;
+  --font-serif: "Merriweather", Georgia, serif;
+  --bg-tablet:  #e9f5ee;    
+  --bg-desktop: #111827;    
+  --text-tablet:#111827;    
+  --text-desktop:#f9fafb;  
+  --border-desktop:#94a3b8;
+}
+header {
+  display: flex;
+  justify-content: space-between;   
+  align-items: center;               
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;                         
+}
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #bbb;                       
+}
+body { 
+   margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg); 
+  color: var(--color-text);
+}
+h1,h2,h3 {
+  font-family: var(--font-serif);
+}
+.hero {  
+  background-color: var(--color-hero); 
+  text-align: center;
+  padding: 2rem 1rem;
+  display: flex;            
+  flex-direction: column;   
+  align-items: center;     
+  gap: 1rem; 
+}
+nav ul {  
+  list-style: none;
+  display: flex;
+  flex-direction: column;  
+  align-items: flex-start;  
+  gap: .5rem;               
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: var(--color-accent);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+nav a:hover {
+  background: #fff;
+  color: #2d426d;
+  border-color: #2d426d;
+}
+a.image-link {
+   text-decoration: none;
+  border: none;
+}
+a.image-link img {
+  border: 0;
+  box-shadow: none;
+}
+button {
+  background:var(--color-accent);
+  border: 1px solid var(--color-border);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+  background: #636569;
+  color: #fff;
+}
+
+footer {
+  background: var(--color-alert);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #3f3838;
+  color: #fff;
+}
+
+img { 
+  max-width: 100%; 
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --color-bg: var(--bg-desktop);
+    --color-text: var(--text-desktop);
+    --color-border: var(--border-desktop);
+  }
+.hero { 
+  padding: 4rem 1.5rem;
+  background-color: var(--bg-desktop);
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+ }
+nav a {
+  text-decoration: none;                 
+  color: var(--color-accent);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+nav ul {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+  }  
+nav a:hover {
+    background: #636569;
+    color: #fff;
+  } 
+  h1 { font-size: 2.6rem; }
+  h2 { font-size: 1.9rem; }
+  button { 
+    padding: 0.75rem 1.5rem; 
+    color: #fff; 
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --color-bg: var(--bg-tablet);
+    --color-text: var(--text-tablet);
+  }
+
+  .hero { 
+  padding: 3rem 1.25rem; 
+  background-color: var(--bg-tablet);
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  }
+  nav ul {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+  }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+  button { padding: 0.7rem 1.3rem; }
+}
+.content {
+  border: 1px solid var(--color-border);
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: medium;
+  padding: 20px;
+}
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  padding: 0.3rem 0;
+}
+.skills-list i {
+  font-size: 1.8rem;
+}
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+.footer-nav a {
+  text-decoration: none;
+  color: #fff;             
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+}
